@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	protected $_creds = array('user' => 'admin', 'pass' => 'rules');
+	protected $_creds = array('user' => 'info@geovanni-ibarra.com', 'pass' => 'geo_iba_2017');
 	
 	public function index()
 	{

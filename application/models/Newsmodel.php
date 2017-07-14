@@ -9,15 +9,20 @@ class Newsmodel extends CI_Model {
     protected $_itemsPerPage = 10;
     protected $_tableName = "news_post";
 
-    public function get_entries( $number = 10)
+    public function get_entries( $number = 0,$limit=null,$fields=null)
     {
-    		$this->db->select("{$this->_tableName}.id,{$this->_tableName}.title,{$this->_tableName}.date_created,count(image.id) as totalImages");
+        $limit = is_null($limit) ? $this->_itemsPerPage : $limit;
+        $fields = is_null($fields) ? "{$this->_tableName}.id,{$this->_tableName}.title,{$this->_tableName}.date_created,count(image.id) as totalImages" : $fields;
+
+    		$this->db->select($fields);
 			$this->db->from("{$this->_tableName}");
 			$this->db->join("image", "image.objectid = {$this->_tableName}.id and type='news'","left");
 			$this->db->group_by("{$this->_tableName}.id");
 			$this->db->order_by("{$this->_tableName}.date_created", "DESC");
-			$this->db->limit($this->_itemsPerPage, $number);
+			$this->db->limit($limit, $number);
 			$query = $this->db->get();
+
+            //echo $this->db->last_query();
             return $query->result();
     }
 
