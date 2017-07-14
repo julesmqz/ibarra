@@ -1,7 +1,7 @@
 <?php
 defined("BASEPATH") OR exit("No direct script access allowed");
 
-class ImgModel extends CI_Model {
+class Imgmodel extends CI_Model {
 	
     public $name = null;
     public $main = null;

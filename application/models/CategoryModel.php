@@ -1,7 +1,7 @@
 <?php
 defined("BASEPATH") OR exit("No direct script access allowed");
 
-class CategoryModel extends CI_Model {
+class Categorymodel extends CI_Model {
 	
     public $title = null;
     public $date_created = null;

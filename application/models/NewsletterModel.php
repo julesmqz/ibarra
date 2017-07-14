@@ -1,7 +1,7 @@
 <?php
 defined("BASEPATH") OR exit("No direct script access allowed");
 
-class NewsletterModel extends CI_Model {
+class Newslettermodel extends CI_Model {
 	
     public $mail = null;
     public $date_created = null;

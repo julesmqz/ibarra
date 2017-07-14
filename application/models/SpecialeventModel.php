@@ -1,7 +1,7 @@
 <?php
 defined("BASEPATH") OR exit("No direct script access allowed");
 
-class SpecialeventModel extends CI_Model {
+class Specialeventmodel extends CI_Model {
 	
     public $title = null;
     public $description = null;

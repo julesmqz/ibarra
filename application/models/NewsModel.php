@@ -1,7 +1,7 @@
 <?php
 defined("BASEPATH") OR exit("No direct script access allowed");
 
-class NewsModel extends CI_Model {
+class Newsmodel extends CI_Model {
 	
     public $title = null;
     public $body = null;

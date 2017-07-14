@@ -1,7 +1,7 @@
 <?php
 defined("BASEPATH") OR exit("No direct script access allowed");
 
-class GalleryModel extends CI_Model {
+class Gallerymodel extends CI_Model {
 	
     public $title = null;
     public $description = null;
